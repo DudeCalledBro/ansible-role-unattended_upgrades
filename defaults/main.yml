@@ -1,0 +1,10 @@
+# Allow Unattended Upgrades to Reboot System
+unattended_upgrades_reboot: false
+unattended_upgrades_reboot_time: "03:00"
+
+# Unattended Upgrades Mails Configuration
+unattended_upgrades_mail_to: ""
+unattended_upgrades_mail_on_error: true
+
+# Unattended Upgrades Package Blacklist
+unattended_upgrades_package_blacklist: []

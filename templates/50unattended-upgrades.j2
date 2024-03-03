@@ -1,0 +1,23 @@
+// {{ ansible_managed }}
+
+Unattended-Upgrade::Automatic-Reboot "{{ unattended_upgrades_reboot }}";
+Unattended-Upgrade::Automatic-Reboot-Time "{{ unattended_upgrades_reboot_time }}";
+
+{% if unattended_upgrades_mail_to and unattended_upgrades_mail_to | length %}
+Unattended-Upgrade::Mail "{{ security_autoupdate_mail_to }}";
+{% if unattended_upgrades_mail_on_error and unattended_upgrades_mail_on_error | length %}
+Unattended-Upgrade::MailOnlyOnError "true";
+{% endif %}
+{% endif %}
+
+Unattended-Upgrade::Allowed-Origins {
+        "${distro_id} ${distro_codename}-security";
+};
+
+{% if unattended_upgrades_package_blacklist and unattended_upgrades_package_blacklist | length %}
+Unattended-Upgrade::Package-Blacklist{
+{% for item in unattended_upgrades_package_blacklist %}
+      "{{ item }}";
+{% endfor %}
+}
+{% endif %}
