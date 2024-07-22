@@ -1,4 +1,4 @@
-# Ansible Role: Unattended_upgrades
+# Ansible Role: Unattended upgrades
 
 [![CI](https://github.com/DudeCalledBro/ansible-role-unattended_upgrades/actions/workflows/molecule.yml/badge.svg)](https://github.com/DudeCalledBro/ansible-role-unattended_upgrades/actions/workflows/molecule.yml)
 
