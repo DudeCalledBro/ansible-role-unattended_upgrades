@@ -3,17 +3,18 @@ dependencies: []
 galaxy_info:
   role_name: unattended_upgrades
   author: dudecalledbro
-  description: Ansible Role for Unattended Upgrades.
+  description: Install and configure unattended-upgrades.
   license: "license (MIT)"
-  min_ansible_version: "2.10"
+  min_ansible_version: "2.15"
   platforms:
   - name: Debian
     versions:
     - all
-
   - name: Ubuntu
     versions:
     - all
 
   galaxy_tags:
+  - debian
   - unattendedupgrades
+  - update

@@ -1,28 +1,22 @@
-# Ansible Role: Unattended Upgrades
+# Ansible Role: Unattended_upgrades
 
-> An Ansible Role that installs and configures Unattended Upgrades on Debian.
+[![CI](https://github.com/DudeCalledBro/ansible-role-unattended_upgrades/actions/workflows/molecule.yml/badge.svg)](https://github.com/DudeCalledBro/ansible-role-unattended_upgrades/actions/workflows/molecule.yml)
 
-## Variables
+Install and configure unattended-upgrades.
 
-The most important variable will be `unattended_upgrades_package_blacklist`. This is a list which contains packages, which should not be upgraded. As default, this is empty. You should consider adding packages to *not* break your system
+## Prerequisites
 
-```yaml
-unattended_upgrades_package_blacklist:
-- containerd.io
-- docker-buildx-plugin
-- docker-ce
-- docker-ce-cli
-- docker-compose-plugin
-```
+- Ensure you have Ansible installed (e.g. `pip3 install ansible`)
+- **Development**: Install the pip packages listed in [requirements.txt](requirements.txt)
 
-## Example
+## Role Variables
 
-The following minmal Playbook will setup and configure unattended upgrades.
+The default values for the variables are set in [defaults/main.yml](defaults/main.yml)
 
 ```yaml
 - hosts: all
   roles:
-  - dudecalledbro.unattended_upgrades
+  - role: dudecalledbro.unattended_upgrades
 ```
 
 ## License

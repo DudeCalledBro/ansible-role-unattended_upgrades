@@ -1,5 +1,7 @@
-molecule
+#
+# Ansible managed
+#
 *.retry
-*.swp
+*/__pycache__
+*.pyc
 .cache
-.DS_Store
